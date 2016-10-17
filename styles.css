@@ -11,3 +11,20 @@ body {
 form {
     text-align: center;
 }
+
+.results-list {
+    list-style-type: none;
+    text-align: left;
+    margin-top: 1em;
+}
+
+.results-list li {
+    margin-bottom: 1em;
+    height: 90px;
+}
+
+.results-list img {
+    vertical-align: top;
+    float: left;
+    margin-right: 1em;
+}
