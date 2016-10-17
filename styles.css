@@ -1,0 +1,13 @@
+body {
+    background-color: #f7f7f7;
+}
+
+.container {
+    background-color: #fff;
+    height: 100vh;
+    text-align: center;
+}
+
+form {
+    text-align: center;
+}
