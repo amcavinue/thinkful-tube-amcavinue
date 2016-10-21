@@ -3,13 +3,15 @@ $(function () {
 
     $('form').submit(function (e) {
         e.preventDefault();
+        var sanitizedInput = $('#js-searchbox').val().trim().replace(/[^a-zA-Z0-9\s]/gi, '');
+
         $.ajax({
             method: "GET",
             url: "https://www.googleapis.com/youtube/v3/search",
             data: {
                 part: 'snippet',
                 key: 'AIzaSyA0lb_D0ogHiJCwqsMStWjwQSM0ex8OxbY',
-                q: $('#js-searchbox').val()
+                q: sanitizedInput
             }
         }).done(function (data) {
             $('#js-searchbox').val('');
@@ -23,14 +25,8 @@ $(function () {
                     '</a></li>'
                 );
             }
-
-            console.log(data);
         }).fail(function (data) {
             console.log('failed');
         });
     });
 });
-
-function renderLi() {
-    return;
-}
